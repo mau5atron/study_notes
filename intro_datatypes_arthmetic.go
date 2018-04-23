@@ -54,7 +54,7 @@ func main(){
 	// however it is good practice
 
 	randNum := 1;
-	fmt.Prinln(randNum)
+	fmt.Println(randNum)
 
 	// You cannot assign a non-compatible type
 	// randNum = "Hello"
@@ -78,3 +78,4 @@ func main(){
 	fmt.Println("6 / 4 = ", 6 / 4)
 	fmt.Println("6 % 4 = ", 6 % 4)
 }
+
