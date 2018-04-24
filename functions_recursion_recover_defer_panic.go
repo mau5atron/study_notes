@@ -3,46 +3,48 @@ package main
 import "fmt"
 
 func main(){
-
+	// FUNCTIONS ARE LISTED OUTSIDE OF MAIN
 	listOfNums := []float64{1, 2, 3, 4, 5}
-	fmt.Println("Sum: ", addThemUp(listOfNums))
+	fmt.Println("Sum:", addThemUp(listOfNums)) // => 15
 
 	// get two values from a function
 	num1, num2 := next2Values(5)
-	fmt.Println(num1, num2)
+	fmt.Println(num1, num2) // => 6 7
 
 	// send an undefined number of values to a function (Variadic Function)
-	fmt.Println(subtractThem(1, 2, 3, 4, 5))
+	fmt.Println(subtractThem(1, 2, 3, 4, 5)) // => -15
 
 	// You can create a function in a function. It has access tot the local 
 	// variables of the containing function
 	// A function like this with no local variables is a closure
 
 	num3 := 3
-
 	doubleNum := func() int {
 		num3 *= 2
 		return num3
 	}
 
-	fmt.Println(doubleNum());
-	fmt.Println(doubleNum());
-
+	fmt.Println(doubleNum()); // => 6
+	fmt.Println(doubleNum()); // => 12
+	fmt.Println(doubleNum()); // => 24
+	fmt.Println(doubleNum()); // => 48
 
 	// Calling a recursive function
-	fmt.Println(factorial(3))
+	fmt.Println(factorial(3)) // => 6
+	fmt.Println(factorial(10)) // => 3628800
 
 	// Defer executes a function after the inclosing function finishes 
 	// defer can be used to KEEP functions together in a logical way
 	// in addition, it executes one last time as a cleanup operation
 	// Like defer closing a file after it is opened to perform some operations
 
-	defer printTwo()
-	printOne()
+	defer printTwo() // holds off on printing two until end of program, 
+	// after everything else is run, printTwo is then run. => 2 is found at botto of terminal
+	printOne() // => 1
 
 	// Use recover() to catch a division by 0 error	
-	fmt.Println(safeDiv(3, 0))
-	fmt.Println(safeDiv(3, 2))
+	fmt.Println(safeDiv(3, 0)) // => runtime error: integer divide by zero
+	fmt.Println(safeDiv(3, 2)) // => 0
 	// We can catch our own errors and recover with panic and recover
 	demPanic()
 }	
