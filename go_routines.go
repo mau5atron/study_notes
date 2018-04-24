@@ -28,4 +28,5 @@ func main(){
 
 	// Wait for the timer to make sure the go routine has time to finish
 	// otherwisse the program would end before that happens
+	time.Sleep(time.Millisecond * 11000)
 }
