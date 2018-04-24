@@ -4,10 +4,10 @@ import(
 	"fmt"
 	"strings"
 	"sort"
-	// "os"
-	// "log"
-	// "io/ioutil"
-	// "strconv"
+	"os"
+	"log"
+	"io/ioutil"
+	"strconv"
 )
 
 func main(){
@@ -45,5 +45,53 @@ func main(){
 	fmt.Println(listOfNumbers2) // => 3, 2, 1
 
 	
+	// FILE I/O
 
+	// Create a file
+	file, err := os.Create("samp.txt")
+
+	// Output any errors
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Writing a string to a file
+	file.WriteString("This is some text my bro dude")
+
+	// Closing a file
+	file.Close()
+
+	// Trying to open the file
+	stream, err := ioutil.ReadFile("samp.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Convert into a string
+	readString := string(stream)
+	fmt.Println(readString)
+
+	// Accepting input
+	fmt.Println("What is your name? ")
+	var name string
+	fmt.Scan(&name)
+	fmt.Println("Hello", name)
+
+	// Casting
+	randInt := 5
+	randFloat := 10.5
+	randString := "100"
+	randString2 := "250.5"
+
+	// Convert numbers types
+	fmt.Println(float64(randInt)) // => 5
+	fmt.Println(int(randFloat)) // => 10
+
+	// Convert a string into an int
+	newInt, _ := strconv.ParseInt(randString, 0, 64)
+	fmt.Println(newInt) // => 100
+
+	// Convert a string into a float
+	newFloat, _ := strconv.ParseFloat(randString2, 64)
+	fmt.Println(newFloat) // => 250.5
 }
