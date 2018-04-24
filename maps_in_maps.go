@@ -19,6 +19,6 @@ func main(){
 	// We can output data where the key matches Superman
 
 	if temp, hero := superhero["Superman"]; hero {
-		fmt.Println(temp["realname"], temp["city"])
+		fmt.Println(temp["realname"], temp["city"]) // => Clark Kent Metropolis
 	}
 }

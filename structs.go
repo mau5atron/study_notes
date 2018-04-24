@@ -17,9 +17,9 @@ func main(){
 	// rect1 := Rectangle{0, 50, 10, 10}
 
 	// we access the values with the dot operator
-	fmt.Println("Rectangle is", rect1.width, "wide")
+	fmt.Println("Rectangle is", rect1.width, "wide") // => Rectangle is 10 wide
 	// call the area method for Rectangle
-	fmt.Println("Area of the rectangle =", rect1.area())
+	fmt.Println("Area of the rectangle =", rect1.area()) // => Area of the rectangle = 100
 }
 
 // we can define our own types ising struct 

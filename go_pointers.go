@@ -6,19 +6,19 @@ func main(){
 	// We pass  the value of a variable
 	x := 0
 	changeXVal(x)
-	fmt.Println("x =", x)
+	fmt.Println("x =", x) // => x = 0
 
 	// If we pass a reference to the varible we can change the value in a function
 	changeXValNow(&x)
-	fmt.Println("x = ", x)
+	fmt.Println("x =", x) // => x = 2
 
 	// Get the address x points to in memory with &
-	fmt.Println("Memory Address for x = ", &x)
+	fmt.Println("Memory Address for x = ", &x) // => Memory Address for x =  0xc420014080
 
 	// We can also generate a pointer with new
 	yPtr := new(int)
 	changeYValNow(yPtr)
-	fmt.Println("y = ", *yPtr)
+	fmt.Println("y = ", *yPtr) // => y =  100
 }
 
 func changeXVal(x int){

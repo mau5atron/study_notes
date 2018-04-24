@@ -11,7 +11,7 @@ func main(){
 	} else {
 		fmt.Println("Uuuhh you can't drive")
 	}
-
+	// => You can drive bro no prob
 
 	// You can use else if to perform different actions, but once a match is reached
 	// the rest of the conditions are not checked 
@@ -22,7 +22,7 @@ func main(){
 	} else {
 		fmt.Println("You can have fun")
 	}
-
+	// => you can drive
 
 	// switch statements are used when you have limited options
 
@@ -31,4 +31,5 @@ func main(){
 		case 18: fmt.Println("You can vote")
 		default: fmt.Println("Go have fun")
 	}
-}
+	// => go have fun
+}	
