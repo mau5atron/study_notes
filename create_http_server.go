@@ -6,7 +6,7 @@ import(
 	"net/http"
 )
 
-// Creating an HTTP Server
+// Creating an HTTP Server in Go
 
 // http.ResponseWriter assembles the servers response and writes to the client
 // http.Request is the clients request
