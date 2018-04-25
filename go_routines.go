@@ -6,7 +6,7 @@ import(
 )
 
 // GO ROUTINES
-
+// two functions running alongside eachother
 func count(id int){
 	// the for loop reads: I initialize i as 0, then if i is less than 10, I want to increment i
 	for i := 0; i < 10; i++ {
